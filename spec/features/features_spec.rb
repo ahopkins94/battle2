@@ -7,10 +7,12 @@
 
 feature 'Testing battle' do
   scenario 'can submit names' do
-    visit('/')
-    fill_in('player_1',with: "Steve")
-    fill_in('player_2',with: "Bob")
-    click_button('Submit')
+    sign_in_and_play
     expect(page).to have_content "Steve vs Bob"
+  end
+
+  scenario "can see player 2's hitpoints" do
+    sign_in_and_play
+    expect(page).to have_content "100HP"
   end
 end
