@@ -15,4 +15,10 @@ feature 'Testing battle' do
     sign_in_and_play
     expect(page).to have_content "100HP"
   end
+
+  scenario "can get confirmation of hit" do
+    sign_in_and_play
+    click_link 'Hit Player 2'
+    expect(page).to have_content "Bob hit"
+  end
 end

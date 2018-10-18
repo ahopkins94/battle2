@@ -19,4 +19,10 @@ get '/play' do
   erb(:play)
 end
 
+get '/hit_play' do
+  @player_1 = session[:player_1]
+  @player_2 = session[:player_2]
+  erb(:hit_play)
+end
+
 end
