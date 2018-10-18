@@ -27,4 +27,10 @@ get '/hit_play' do
   erb(:hit_play)
 end
 
+# get '/hit_play_switching' do
+#   @game = $game
+#   $game.switch_players
+#   erb(:hit_play_switching)
+# end
+
 end
