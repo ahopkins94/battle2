@@ -24,13 +24,13 @@ end
 get '/hit_play' do
   @game = $game
   $game.attack($game.player_2)
+  $game.switch_turns
+  redirect '/game_over' if $game.game_over?
   erb(:hit_play)
 end
 
-# get '/hit_play_switching' do
-#   @game = $game
-#   $game.switch_players
-#   erb(:hit_play_switching)
-# end
+get '/game_over' do
+  erb(:game_over)
+end
 
 end
