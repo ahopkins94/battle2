@@ -1,7 +1,7 @@
-<h2><%= $game.non_active_player.name%> hit <%= $game.turn.name %></h2>
-<h1><%= $game.current_turn.name %>'s turn </h1>
-<h2> <%= $game.player_1.hit_points %>HP </h2>
-<h2> <%= $game.player_2.hit_points %>HP </h2>
+<h2><%= @game.non_active_player.name%> hit <%= @game.turn.name %></h2>
+<h1><%= @game.current_turn.name %>'s turn </h1>
+<h2> <%= @game.player_1.hit_points %>HP </h2>
+<h2> <%= @game.player_2.hit_points %>HP </h2>
 <form action="/hit_play">
   <input type="submit" value="Hit">
 </form>

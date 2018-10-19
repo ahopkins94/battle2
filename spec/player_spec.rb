@@ -18,7 +18,8 @@ describe Player do
 
   describe '#receive_damage' do
     it 'should receive damage' do
-      expect { steve.receive_damage }.to change { steve.hit_points }.by(-Player::DEFAULT_HIT_REDUCTION)
+      allow(Kernel).to receive(:rand){10}
+      expect { steve.receive_damage }.to change { steve.hit_points }.by(-10)
     end
   end
 end

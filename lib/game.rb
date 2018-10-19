@@ -2,6 +2,7 @@ class Game
 
   attr_reader :player_1, :player_2, :turn
 
+
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
@@ -32,6 +33,14 @@ class Game
     if game_over? == true
       player_1.dead ? player_2 : player_1
     end
+  end
+
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
   end
 
 end
